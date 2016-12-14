@@ -1,0 +1,5 @@
+<Context 
+	path="/sso" 
+	docBase="E:/export/App/sso.walkerljl.org" 
+	crossContext="true" reloadable="true">
+</Context>

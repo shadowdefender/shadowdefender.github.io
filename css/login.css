@@ -1,0 +1,87 @@
+body{background:url(../img/grid.png)}
+.brand{
+	text-shadow: none;
+	font-size: 24px;
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	display: block;
+	float: left;
+	padding: 30px 20px 20px;
+	margin-left: -20px;
+	font-weight: 200;
+}
+.login-container{
+	background-color: white;
+	width: 1008px;
+	margin: auto;
+	height:500px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.left-container{
+	height:350px;
+	width: 95%;
+	margin: 100px 20px 30px 20px;
+	
+}
+.right-container{
+	margin: 100px 50px 30px 50px;
+	
+}
+#bottom_link {
+	margin: 20px 0;
+	color: #fff;
+	font-weight: bold;
+}
+
+.input-icon {
+	position: relative;
+	margin-top: 20px;
+}
+
+span.input-icon {
+	display: inline-block
+	
+}
+
+.promotion h1 .emphasis {
+color: #2ec6c8;
+}
+
+.input-icon>input,.input-icon>input {
+	padding-left: 24px;
+	padding-right: 6px
+}
+
+.input-icon.input-icon-right>input,.input-icon.input-icon-right>input {
+	padding-left: 6px;
+	padding-right: 24px
+}
+
+.input-icon>[class *="icon-"] {
+	padding: 0 3px;
+	z-index: 2;
+	position: absolute;
+	top: 1px;
+	bottom: 1px;
+	left: 3px;
+	line-height: 28px;
+	display: inline-block;
+	color: #909090;
+	font-size: 16px
+}
+
+.input-icon.input-icon-right>[class *="icon-"] {
+	left: auto;
+	right: 3px
+}
+
+.input-icon>input:focus+[class *="icon-"] {
+	color: #579
+}
+
+
+.block {
+	display: block !important
+}

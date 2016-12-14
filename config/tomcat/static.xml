@@ -1,0 +1,5 @@
+<Context 
+	path="/static" 
+	docBase="E:/export/App/dev.static.walkerljl.org/orgwalkerljl-static" 
+	crossContext="true" reloadable="true">
+</Context>

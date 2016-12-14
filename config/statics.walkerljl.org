@@ -1,0 +1,30 @@
+upstream tomcat_statics {
+	server 172.26.12.25:1601 weight=10 max_fails=2 fail_timeout=30s;
+}
+
+server{
+	listen                   80;
+    server_name              statics.walkerljl.org;
+    access_log               /export/servers/nginx/logs/statics.walkerljl.org/statics.walkerljl.org_access.log main;
+    error_log                /export/servers/nginx/logs/statics.walkerljl.org/statics.walkerljl.org_error.log warn;
+    chunkin on;
+    error_page 411 = @my_error;
+    location @my_error {
+        chunkin_resume;
+    }            
+    root /export/app/statics.walkerljl.org/;
+
+	location / {
+		proxy_next_upstream     http_500 http_502 http_503 http_504 error timeout invalid_header;
+	    proxy_set_header        Host  $host;
+	    proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header        J-Forwarded-For $proxy_add_x_forwarded_for;
+	    proxy_pass              http://tomcat_statics;
+	    expires                 0;
+	}
+	
+	location /logs/ {
+	    autoindex       off;
+	    deny all;
+	}       
+}

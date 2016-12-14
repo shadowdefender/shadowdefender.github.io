@@ -1,0 +1,15 @@
+
+/*遮罩*/
+DIV#winModal{position: absolute;top:0;left:0;width:100%;height:100%;background-color: #c0c0c0;z-index:9999;filter:alpha(opacity=50);-moz-opacity:0.5;opacity: 0.5; }
+DIV#loadInfo{position: absolute;top:40%;left:40%;width:260px;height:30px;background: #ffffff url("../img/loading.gif") left center no-repeat;border:2px solid #548FFD;color:#000000;font-size:13px;z-index:10000;padding-top:13px;padding-left:25px;}
+
+/*复写bootstrap样式*/
+.modal-backdrop, .modal-backdrop.fade.in {opacity: 0.2;filter: alpha(opacity=20);}
+.modal.fade.in {top:20%;}
+.btn-mini{font-size: 12px !important;}
+FORM.well{padding: 8px;margin: 0px 0px 10px !important;}
+.alert {margin-bottom: 10px !important;}
+.window >.modal-header{padding: 10px 10px 15px 10px;}
+.window >.modal-header h3{font-weight:bold;font-size: 18px;line-height: 18px;color: #666666;}
+.window >.modal-header A.close{margin:0px;}
+.window >.modal-body{overflow: auto;}
